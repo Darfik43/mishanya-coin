@@ -11,8 +11,15 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
+    @Override
     public void createUser(User user) {
         userRepository.save(user);
+    }
+
+    @Override
+    public User getById(String id) {
+        System.out.println(userRepository.findById(id).get());
+        return userRepository.findById(id).get();
     }
 
 }
