@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.RedisHash;
 
 import java.io.Serializable;
 
-@RedisHash("User")
+@RedisHash("user")
 @AllArgsConstructor
 public class User implements Serializable {
 
