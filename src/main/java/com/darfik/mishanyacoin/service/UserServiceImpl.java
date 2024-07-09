@@ -1,5 +1,6 @@
 package com.darfik.mishanyacoin.service;
 
+import com.darfik.mishanyacoin.dto.RegistrationRequest;
 import com.darfik.mishanyacoin.model.User;
 import com.darfik.mishanyacoin.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -12,8 +13,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public void createUser(User user) {
-        userRepository.save(user);
+    public void createUser(RegistrationRequest registrationRequest) {
+        userRepository.save(new User(registrationRequest.username(), registrationRequest.username()));
     }
 
     @Override
