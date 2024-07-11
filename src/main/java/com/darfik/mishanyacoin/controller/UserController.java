@@ -1,5 +1,6 @@
 package com.darfik.mishanyacoin.controller;
 
+import com.darfik.mishanyacoin.dto.RegistrationRequest;
 import com.darfik.mishanyacoin.model.User;
 import com.darfik.mishanyacoin.service.UserService;
 import lombok.AllArgsConstructor;
@@ -18,8 +19,8 @@ public class UserController {
     }
 
     @PostMapping
-    public void createUser(@RequestBody User user) {
-        userService.createUser(user);
+    public void createUser(@RequestBody RegistrationRequest registrationRequest) {
+        userService.createUser(registrationRequest);
     }
 
 }
