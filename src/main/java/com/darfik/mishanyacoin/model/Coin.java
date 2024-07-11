@@ -1,6 +1,7 @@
 package com.darfik.mishanyacoin.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import org.springframework.data.redis.core.RedisHash;
 
@@ -8,8 +9,10 @@ import org.springframework.data.redis.core.RedisHash;
 @AllArgsConstructor
 public class Coin {
 
-    private String name;
+    @JsonProperty
+    private String id;  //Should be name of coin
 
+    @JsonProperty
     private Double price;
 
 }
