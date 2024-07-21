@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.RedisHash;
 @AllArgsConstructor
 public class Click {
 
-    private String userId;
+    private String id;
 
     private Long clicksAmount;
 
