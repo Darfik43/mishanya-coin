@@ -4,9 +4,9 @@ public record UserInfoResponse(
 
         String id,
 
-        String username,
+        String username
 
-        Double balance
+//        Double balance
 
         //Long clicksAmount
 
