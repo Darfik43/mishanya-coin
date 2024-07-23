@@ -1,14 +1,14 @@
 package com.darfik.mishanyacoin.dto;
 
-public record UserInfoResponse(
+public record UserInfo(
 
         String id,
 
-        String username
+        String username,
 
 //        Double balance
 
-        //Long clicksAmount
+        Long clicksAmount
 
 ) {
 }

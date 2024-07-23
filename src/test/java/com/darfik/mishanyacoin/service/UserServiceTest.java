@@ -1,7 +1,7 @@
 package com.darfik.mishanyacoin.service;
 
 import com.darfik.mishanyacoin.dto.RegistrationRequest;
-import com.darfik.mishanyacoin.dto.UserInfoResponse;
+import com.darfik.mishanyacoin.dto.UserInfo;
 import com.darfik.mishanyacoin.exception.UserAlreadyExistsException;
 import com.darfik.mishanyacoin.model.User;
 import com.darfik.mishanyacoin.repository.UserRepository;
@@ -59,10 +59,10 @@ public class UserServiceTest {
 
         when(userRepository.findById("userId")).thenReturn(Optional.of(user));
 
-        UserInfoResponse userInfoResponse = userService.getById("userId");
+        UserInfo userInfo = userService.getById("userId");
 
-        assertEquals("userId", userInfoResponse.id());
-        assertEquals("username", userInfoResponse.username());
+        assertEquals("userId", userInfo.id());
+        assertEquals("username", userInfo.username());
     }
 
     @Test
