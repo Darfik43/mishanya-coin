@@ -3,6 +3,7 @@ package com.darfik.mishanyacoin.service;
 import com.darfik.mishanyacoin.dto.RegistrationRequest;
 import com.darfik.mishanyacoin.dto.UserInfo;
 import com.darfik.mishanyacoin.exception.UserAlreadyExistsException;
+import com.darfik.mishanyacoin.model.Click;
 import com.darfik.mishanyacoin.model.User;
 import com.darfik.mishanyacoin.repository.ClickRepository;
 import com.darfik.mishanyacoin.repository.UserRepository;
@@ -19,10 +20,12 @@ public class UserServiceImpl implements UserService {
     private final ClickRepository clickRepository;
 
     //TODO need any logic to generate unique ID
+    // TODO create entities in all DBs(user repo, click repo)
     @Override
     public void createUser(RegistrationRequest registrationRequest) {
         if (!userExists(registrationRequest.username())) {
             userRepository.save(new User(registrationRequest.username(), registrationRequest.username()));
+            clickRepository.save(new Click(registrationRequest.username(), 0L));
         } else {
             throw new UserAlreadyExistsException(
                     "User with the nickname " + registrationRequest.username() + " already exists"
