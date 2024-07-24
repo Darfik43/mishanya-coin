@@ -4,6 +4,7 @@ import com.darfik.mishanyacoin.dto.RegistrationRequest;
 import com.darfik.mishanyacoin.dto.UserInfo;
 import com.darfik.mishanyacoin.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,6 +20,7 @@ public class UserController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public void createUser(@RequestBody RegistrationRequest registrationRequest) {
         userService.createUser(registrationRequest);
     }
