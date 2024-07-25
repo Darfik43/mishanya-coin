@@ -4,11 +4,11 @@ import com.darfik.mishanyacoin.model.Coin;
 
 public interface CoinService {
 
-    void createCoin(String name, Double price);
+    void createCoin(String id, Double price);
 
     //TODO must return dto
-    Coin getCoinInfo(String name);
+    Coin getCoinInfo(String id);
 
-    void updateCoinPrice(String name, Double price);
+    void updateCoinPrice(String id, Double price);
 
 }
