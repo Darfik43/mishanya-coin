@@ -1,14 +1,13 @@
 package com.darfik.mishanyacoin.service;
 
-import com.darfik.mishanyacoin.model.Coin;
+import com.darfik.mishanyacoin.dto.CoinInfo;
 
 public interface CoinService {
 
-    void createCoin(String id, Double price);
+    void createCoin(CoinInfo coinInfo);
 
-    //TODO must return dto
-    Coin getCoinInfo(String id);
+    CoinInfo getCoinInfo(String id);
 
-    void updateCoinPrice(String id, Double price);
+    void updateCoinPrice(CoinInfo coinInfo);
 
 }
