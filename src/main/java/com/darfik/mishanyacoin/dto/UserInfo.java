@@ -6,7 +6,7 @@ public record UserInfo(
 
         String username,
 
-//        Double balance
+        Double balance,
 
         Long clicksAmount
 
