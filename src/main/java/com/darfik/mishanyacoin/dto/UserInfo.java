@@ -4,11 +4,7 @@ public record UserInfo(
 
         String id,
 
-        String username,
-
-        Double balance,
-
-        Long clicksAmount
+        String username
 
 ) {
 }
