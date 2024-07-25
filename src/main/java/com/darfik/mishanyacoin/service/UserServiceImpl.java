@@ -38,8 +38,7 @@ public class UserServiceImpl implements UserService {
                         new NoSuchElementException("User " + id + " doesn't exist"));
         return new UserInfo(
                 user.getId(),
-                user.getUsername(),
-                clickRepository.findById(id).get().getClicksAmount()
+                user.getUsername()
         ); // Костыль
     }
 
