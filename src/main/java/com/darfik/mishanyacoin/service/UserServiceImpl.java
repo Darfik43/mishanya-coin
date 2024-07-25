@@ -19,8 +19,6 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ClickRepository clickRepository;
 
-    //TODO need any logic to generate unique ID
-    // TODO create entities in all DBs(user repo, click repo)
     @Override
     public void createUser(RegistrationRequest registrationRequest) {
         if (!userExists(registrationRequest.username())) {
