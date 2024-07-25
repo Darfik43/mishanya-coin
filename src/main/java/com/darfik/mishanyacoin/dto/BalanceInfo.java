@@ -2,9 +2,9 @@ package com.darfik.mishanyacoin.dto;
 
 public record BalanceInfo(
 
-        Double balance,
+        Long clicksAmount,
 
-        Long clicksAmount
+        Double balance
 
 ) {
 }
