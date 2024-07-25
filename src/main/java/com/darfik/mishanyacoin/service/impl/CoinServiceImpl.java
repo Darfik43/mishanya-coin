@@ -1,9 +1,10 @@
-package com.darfik.mishanyacoin.service;
+package com.darfik.mishanyacoin.service.impl;
 
 import com.darfik.mishanyacoin.dto.CoinInfo;
 import com.darfik.mishanyacoin.exception.CoinAlreadyExistsException;
 import com.darfik.mishanyacoin.model.Coin;
 import com.darfik.mishanyacoin.repository.CoinRepository;
+import com.darfik.mishanyacoin.service.CoinService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

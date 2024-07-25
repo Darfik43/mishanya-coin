@@ -1,4 +1,4 @@
-package com.darfik.mishanyacoin.service;
+package com.darfik.mishanyacoin.service.impl;
 
 import com.darfik.mishanyacoin.dto.RegistrationRequest;
 import com.darfik.mishanyacoin.dto.UserInfo;
@@ -7,6 +7,7 @@ import com.darfik.mishanyacoin.model.Click;
 import com.darfik.mishanyacoin.model.User;
 import com.darfik.mishanyacoin.repository.ClickRepository;
 import com.darfik.mishanyacoin.repository.UserRepository;
+import com.darfik.mishanyacoin.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

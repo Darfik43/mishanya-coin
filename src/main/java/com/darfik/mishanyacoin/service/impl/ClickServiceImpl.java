@@ -1,6 +1,7 @@
-package com.darfik.mishanyacoin.service;
+package com.darfik.mishanyacoin.service.impl;
 
 import com.darfik.mishanyacoin.repository.ClickRepository;
+import com.darfik.mishanyacoin.service.ClickService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

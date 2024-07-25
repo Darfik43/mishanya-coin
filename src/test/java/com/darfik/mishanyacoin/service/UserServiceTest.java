@@ -5,6 +5,7 @@ import com.darfik.mishanyacoin.dto.UserInfo;
 import com.darfik.mishanyacoin.exception.UserAlreadyExistsException;
 import com.darfik.mishanyacoin.model.User;
 import com.darfik.mishanyacoin.repository.UserRepository;
+import com.darfik.mishanyacoin.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
