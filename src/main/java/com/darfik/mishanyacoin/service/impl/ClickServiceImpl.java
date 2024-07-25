@@ -1,5 +1,6 @@
 package com.darfik.mishanyacoin.service.impl;
 
+import com.darfik.mishanyacoin.model.Click;
 import com.darfik.mishanyacoin.repository.ClickRepository;
 import com.darfik.mishanyacoin.service.ClickService;
 import lombok.AllArgsConstructor;
@@ -24,4 +25,10 @@ public class ClickServiceImpl implements ClickService {
                 .orElseThrow(() -> new NoSuchElementException("User with id " + id + " doesn't exist"));
     }
 
+    @Override
+    public Long getClicksAmount(String id) {
+        return clickRepository.findById(id)
+                .map(Click::getClicksAmount)
+                .orElseThrow(() -> new NoSuchElementException("User with id " + id + " doesn't exist"));
+    }
 }

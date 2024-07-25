@@ -4,4 +4,6 @@ public interface ClickService {
 
     void handleClick(String id);
 
+    Long getClicksAmount(String id);
+
 }
